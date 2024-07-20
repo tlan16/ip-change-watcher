@@ -68,6 +68,15 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
 
 [[package]]
+name = "cryptify"
+version = "3.1.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d0f7653bb506f0bcfbec6ee9f724a8196a201f0afd60d6bafb075d748b9b7398"
+dependencies = [
+ "labyrinth_macros",
+]
+
+[[package]]
 name = "darling"
 version = "0.10.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -294,6 +303,19 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "40ecd4077b5ae9fd2e9e169b102c6c330d0605168eb0e8bf79952b256dbefffd"
 
 [[package]]
+name = "goldberg"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d2d9cbd1fdba1a34e35404e93aab99efbf14076ab4c3380b4d408f7cd3cd9710"
+dependencies = [
+ "moisture",
+ "proc-macro2",
+ "quote",
+ "rand",
+ "syn 1.0.109",
+]
+
+[[package]]
 name = "heck"
 version = "0.4.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -407,6 +429,8 @@ dependencies = [
 name = "ip-change-notifier"
 version = "0.1.0"
 dependencies = [
+ "cryptify",
+ "goldberg",
  "public-ip",
  "tokio",
 ]
@@ -422,6 +446,18 @@ name = "itoa"
 version = "1.0.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "49f1f14873335454500d59611f1cf4a4b0f786f9ac11f4312a78e4cf2566695b"
+
+[[package]]
+name = "labyrinth_macros"
+version = "2.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a49a429784bf214985bd5e5c058a89889a2e5b9fc60ebd60ced2bf0429791fa4"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "rand",
+ "syn 2.0.71",
+]
 
 [[package]]
 name = "lazy_static"
@@ -471,6 +507,17 @@ dependencies = [
  "libc",
  "wasi",
  "windows-sys 0.48.0",
+]
+
+[[package]]
+name = "moisture"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "da1c12ec95f955162f01e673f383afd3f1306a5d7254f0aa38c4d219066ad7b0"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn 1.0.109",
 ]
 
 [[package]]

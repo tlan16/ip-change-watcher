@@ -8,3 +8,6 @@ edition = "2021"
 [dependencies]
 tokio = { version = "1.38.1", features = ["rt", "rt-multi-thread", "macros"] }
 public-ip = "0.2"
+# The following are obsufucation dependencies
+cryptify = "3.1.1"
+goldberg = "0.1.0"
