@@ -1,11 +1,10 @@
 [package]
-name = "ip-change-notifier"
+name = "ip-change-watcher"
 version = "0.1.0"
 edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [dependencies]
 tokio = { version = "1.38.1", features = ["rt", "rt-multi-thread", "macros"] }
-public-ip = "0.2"
 rdkafka = { version = "0.36.2", features = ["cmake-build"] }
+reqwest = { version = "0.12", features = ["json"] }
+sea-orm = { version = "0.12", features = [ "sqlx-sqlite", "macros" ] }

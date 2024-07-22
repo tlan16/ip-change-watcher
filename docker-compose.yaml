@@ -1,7 +1,7 @@
 ---
 services:
   app:
-    container_name: ip-change-notifier
+    container_name: ip-change-watcher
     build:
       context: .
       dockerfile: Dockerfile
